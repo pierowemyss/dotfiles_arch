@@ -14,3 +14,6 @@ Videos/
 .bash_history
 .bash_logout
 .bash_profile
+.config/go/
+*/user-dirs.dirs
+*/user-dirs.locale

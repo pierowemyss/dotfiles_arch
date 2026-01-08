@@ -1,0 +1,203 @@
+/**
+ * Minimal rofi theme – foot-like, centered, clean
+ */
+
+configuration {
+    modi:                 "drun,run";
+    show-icons:           false;
+
+    display-drun:         "Apps";
+    display-run:          "Run";
+
+    drun-display-format:  "{name}";
+    window-format:        "{w} · {c} · {t}";
+}
+
+/***** Farben & Font *****/
+* {
+    font:                       "JetBrainsMono Nerd Font 11";
+
+    /* dunkler Hintergrund, leicht bläulich, ~80% Deckkraft */
+    background-colour:          #0f141acc;
+    foreground-colour:          #dde4e8;
+
+    alternate-background:       #151b22cc;
+
+    normal-background:          @background-colour;
+    normal-foreground:          @foreground-colour;
+
+    urgent-background:          #cf5b5bcc;
+    urgent-foreground:          #0f141a;
+
+    active-background:          #202734cc;
+    active-foreground:          @foreground-colour;
+
+    /* ausgewählte Zeile – hell, neutral */
+    selected-normal-background: #d7dde5f0;
+    selected-normal-foreground: #111419;
+
+    selected-urgent-background: #ff7070e0;
+    selected-urgent-foreground: #111419;
+
+    selected-active-background: #cdd5dae0;
+    selected-active-foreground: #111419;
+}
+
+/***** Fenster *****/
+window {
+    transparency:          "real";
+    location:              center;
+    anchor:                center;
+    fullscreen:            false;
+
+    width:                 460px;
+    x-offset:              0px;
+    y-offset:              0px;
+
+    margin:                0px;
+    padding:               0px;
+    border:                0px;
+    border-radius:         16px;
+
+    background-color:      @background-colour;
+    cursor:                "default";
+}
+
+/***** Layout *****/
+mainbox {
+    spacing:               10px;
+    margin:                0px;
+    padding:               20px 22px;
+    background-color:      transparent;
+    children:              [ "inputbar", "listview" ];
+}
+
+/***** Input *****/
+inputbar {
+    enabled:               true;
+    spacing:               0px;
+    margin:                0px 0px 8px 0px;
+    padding:               0px;
+    background-color:      transparent;
+    text-color:            @foreground-colour;
+    children:              [ "entry" ];
+}
+
+prompt {
+    enabled:               false;
+}
+
+entry {
+    enabled:               true;
+    padding:               8px 12px;
+    border-radius:         10px;
+    background-color:      @alternate-background;
+    text-color:            @foreground-colour;
+    cursor:                text;
+
+    placeholder:           "Search…";
+    placeholder-color:     #6c7a80;
+}
+
+textbox-prompt-colon,
+num-filtered-rows,
+textbox-num-sep,
+num-rows,
+case-indicator {
+    enabled:               false;
+}
+
+/***** Liste *****/
+listview {
+    enabled:               true;
+    columns:               1;
+    lines:                 8;
+    cycle:                 true;
+    dynamic:               true;
+    scrollbar:             false;
+    layout:                vertical;
+
+    spacing:               6px;
+    margin:                0px;
+    padding:               0px;
+
+    background-color:      transparent;
+    text-color:            @foreground-colour;
+    cursor:                "default";
+}
+
+element {
+    enabled:               true;
+    spacing:               6px;
+    padding:               6px 8px;
+    border-radius:         6px;
+
+    background-color:      transparent;
+    text-color:            @foreground-colour;
+    cursor:                pointer;
+}
+
+/* normale Zeilen: transparent */
+element normal.normal,
+element alternate.normal {
+    background-color:      transparent;
+    text-color:            @normal-foreground;
+}
+
+/* ausgewählt */
+element selected.normal {
+    background-color:      @selected-normal-background;
+    text-color:            @selected-normal-foreground;
+}
+
+/* Rest der States */
+element normal.urgent,
+element alternate.urgent {
+    background-color:      transparent;
+    text-color:            @urgent-foreground;
+}
+element normal.active,
+element alternate.active {
+    background-color:      transparent;
+    text-color:            @active-foreground;
+}
+element selected.urgent {
+    background-color:      @selected-urgent-background;
+    text-color:            @selected-urgent-foreground;
+}
+element selected.active {
+    background-color:      @selected-active-background;
+    text-color:            @selected-active-foreground;
+}
+
+element-icon {
+    background-color:      transparent;
+    text-color:            inherit;
+    size:                  22px;
+    cursor:                inherit;
+}
+
+element-text {
+    background-color:      transparent;
+    text-color:            inherit;
+    highlight:             #7ea0e0;
+    cursor:                inherit;
+}
+
+/***** Mode-Switcher & Messages aus *****/
+mode-switcher {
+    enabled:               false;
+}
+
+message {
+    enabled:               false;
+}
+
+textbox {
+    enabled:               false;
+}
+
+error-message {
+    enabled:               false;
+}
+

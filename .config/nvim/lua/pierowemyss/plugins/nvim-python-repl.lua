@@ -1,0 +1,48 @@
+return {
+	-- "geg2102/nvim-python-repl",
+	-- dependencies = "nvim-treesitter",
+	-- ft = { "python", "lua", "scala" },
+	-- config = function()
+	-- 	require("nvim-python-repl").setup({
+	-- 		execute_on_send = true,
+	-- 		vsplit = true,
+	-- 	})
+	-- 	local keymap = vim.keymap
+	-- 	keymap.set(
+	-- 		"n",
+	-- 		"<leader>rs",
+	-- 		"<cmd>lua require('nvim-python-repl').send_statement_definition()<CR>",
+	-- 		{ desc = "Send semantic unit to REPL" }
+	-- 	)
+	-- 	keymap.set(
+	-- 		"v",
+	-- 		"<leader>rs",
+	-- 		"<cmd>lua require('nvim-python-repl').send_visual_to_repl()<CR>",
+	-- 		{ desc = "Send visual selection to REPL" }
+	-- 	)
+	-- 	keymap.set(
+	-- 		"n",
+	-- 		"<leader>rf",
+	-- 		"<cmd>lua require('nvim-python-repl').send_buffer_to_repl()<CR>",
+	-- 		{ desc = "Send entire buffer to REPL" }
+	-- 	)
+	-- 	keymap.set(
+	-- 		"n",
+	-- 		"<leader>rr",
+	-- 		"<cmd>lua require('nvim-python-repl').toggle_execute()<CR>",
+	-- 		{ desc = "Automatically execute command in REPL after sent" }
+	-- 	)
+	-- 	keymap.set(
+	-- 		"n",
+	-- 		"<leader>ra",
+	-- 		"<cmd>lua require('nvim-python-repl').toggle_vertical()<CR>",
+	-- 		{ desc = "Create REPL in vertical or horizontal split" }
+	-- 	)
+	-- 	keymap.set(
+	-- 		"n",
+	-- 		"<leader>rw",
+	-- 		"<cmd>lua require('nvim-python-repl').open_repl()<CR>",
+	-- 		{ desc = "Opens the REPL in a window split" }
+	-- 	)
+	-- end,
+}

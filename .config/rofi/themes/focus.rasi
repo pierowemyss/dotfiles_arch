@@ -1,0 +1,92 @@
+* {
+    font: "JetBrainsMono Nerd Font 11";
+}
+
+/* --- Fenster --- */
+window {
+    location: center;
+    anchor: center;
+    width: 520px;
+
+    border-radius: 16px;
+    border: 0px;
+    padding: 18px 22px;
+
+    background-color: rgba(7, 12, 18, 0.88);   /* leicht transparent, dunkel */
+}
+
+/* Hauptcontainer */
+mainbox {
+    spacing: 10px;
+}
+
+/* Modi-Leiste (oben links, wenn aktiv) */
+mode-switcher {
+    enabled: false;
+}
+
+/* --- Eingabezeile --- */
+inputbar {
+    padding: 6px 10px;
+    border-radius: 10px;
+    background-color: rgba(10, 18, 26, 0.95);
+
+    text-color: #F3E4B8;
+    spacing: 8px;
+}
+
+prompt {
+    enabled: false;
+}
+
+entry {
+    placeholder: "Search…";
+    placeholder-color: #89919a;
+}
+
+/* --- Liste --- */
+listview {
+    columns: 1;
+    lines: 8;
+
+    spacing: 4px;
+    scrollbar: false;
+}
+
+/* Einträge allgemein */
+element {
+    padding: 6px 8px;
+    border-radius: 8px;
+    background-color: transparent;
+    text-color: #DDE4E8;
+}
+
+/* Icon + Text */
+element-icon {
+    size: 18;
+    padding: 0 8px 0 4px;
+}
+
+element-text {
+    highlight: bold;
+}
+
+/* Ausgewählter Eintrag */
+element selected {
+    background-color: rgba(243, 228, 184, 0.16);   /* heller Fokus */
+    text-color: #F3E4B8;
+}
+
+/* Hover-Effekt (mit Maus) */
+element active {
+    background-color: rgba(243, 228, 184, 0.10);
+}
+
+/* Nachrichten (Fehler etc.) */
+message {
+    padding: 6px 8px;
+    border-radius: 8px;
+    background-color: rgba(10, 18, 26, 0.95);
+    text-color: #DDE4E8;
+}
+

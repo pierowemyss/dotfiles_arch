@@ -1,0 +1,183 @@
+/*****----- Configuration -----*****/
+configuration {
+	modi:                       "drun,filebrowser,window";
+    show-icons:                 true;
+    display-drun:               "Apps";
+    display-run:                "Run";
+    display-filebrowser:        "Files";
+    display-window:             "Windows";
+	drun-display-format:        "{name}\n[<span weight='light' size='small'><i>({generic})</i></span>]";
+	window-format:              "Class : {c}\nWorkspace : {w}";
+}
+
+/*****----- Global Properties -----*****/
+* {
+    font:                        "Iosevka Nerd Font 10";
+}
+
+/*****----- Main Window -----*****/
+window {
+    transparency:                "real";
+    location:                    center;
+    anchor:                      center;
+    fullscreen:                  false;
+    width:                       500px;
+    x-offset:                    0px;
+    y-offset:                    0px;
+
+    enabled:                     true;
+    margin:                      0px;
+    padding:                     0px;
+    border-radius:               18px;
+    cursor:                      "default";
+
+    /* dunkles Blau, leicht transparent */
+    background-color:            #050b18e6;
+}
+
+/*****----- Main Box -----*****/
+mainbox {
+    enabled:                     true;
+    spacing:                     15px;
+    padding:                     30px;
+    background-color:            transparent;
+    children:                    [ "inputbar", "mode-switcher", "listview" ];
+}
+
+/*****----- Inputbar -----*****/
+inputbar {
+    enabled:                     true;
+    spacing:                     15px;
+    margin:                      0px;
+    background-color:            transparent;
+    children:                    [ "textbox-prompt-colon", "entry" ];
+}
+
+textbox-prompt-colon {
+    enabled:                     true;
+    expand:                      false;
+    padding:                     12px 16px;
+    border:                      0px;
+    border-radius:               12px;
+    background-color:            #111827f0;
+    text-color:                  #e5e7f5;
+    str:                         "";
+}
+
+entry {
+    enabled:                     true;
+    padding:                     12px 16px;
+    border:                      0px;
+    border-radius:               12px;
+    background-color:            #111827f0;
+    text-color:                  #e5e7f5;
+    cursor:                      text;
+    placeholder:                 "Search...";
+    placeholder-color:           #6b7280;
+    vertical-align:              0.5;
+    horizontal-align:            0.0;
+}
+
+/*****----- Listview -----*****/
+listview {
+    enabled:                     true;
+    columns:                     1;
+    lines:                       5;
+    cycle:                       true;
+    dynamic:                     true;
+    scrollbar:                   false;
+    layout:                      vertical;
+    reverse:                     false;
+    fixed-height:                true;
+    fixed-columns:               true;
+    
+    spacing:                     10px;
+    background-color:            transparent;
+    cursor:                      "default";
+}
+
+/*****----- Elements -----*****/
+element {
+    enabled:                     true;
+    spacing:                     10px;
+    margin:                      0px;
+    padding:                     10px;
+    border:                      0px;
+    border-radius:               14px;
+    background-color:            transparent;
+    text-color:                  #d1d5e8;
+    cursor:                      pointer;
+}
+
+element normal.active {
+    background-image:            linear-gradient(to right, #1f2937, #273549);
+    text-color:                  #e5e7f5;
+}
+
+element selected.normal {
+    border-radius:               14px;
+    background-image:            linear-gradient(to right, #31425e, #415477);
+    text-color:                  #e5e7f5;
+}
+
+element selected.active {
+    background-image:            linear-gradient(to right, #363863, #4b4f7d);
+    text-color:                  #f9fafb;
+}
+
+element-icon {
+    background-color:            transparent;
+    size:                        48px;
+    cursor:                      inherit;
+}
+element-text {
+    background-color:            inherit;
+    text-color:                  inherit;
+    cursor:                      inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0.0;
+}
+
+/*****----- Mode Switcher -----*****/
+mode-switcher{
+    enabled:                     true;
+    expand:                      false;
+    spacing:                     12px;
+    background-color:            transparent;
+}
+button {
+    font:            "Iosevka Nerd Font Bold 10";
+    padding:         10px 26px;
+    margin:          0px 6px;
+    border:          0px;
+    border-color:    transparent;
+    border-radius:   999px;          /* pill */
+    background-color:#1f2937;        /* dunkles Blau, kein Verlauf */
+    background-image:none;
+    text-color:      #e5e7f5;
+    cursor:          pointer;
+}
+
+button selected {
+    border:          0px;
+    border-color:    transparent;
+    border-radius:   999px;
+    background-color:#36527a;        /* aktiver Tab, etwas heller */
+    background-image:none;
+    text-color:      #f9fafb;
+}
+
+/*****----- Message -----*****/
+error-message {
+    padding:                     20px;
+    background-color:            #050b18e6;
+    text-color:                  #e5e7f5;
+}
+textbox {
+    padding:                     0px;
+    border-radius:               0px;
+    text-color:                  #e5e7f5;
+    vertical-align:              0.5;
+    horizontal-align:            0.0;
+}
+

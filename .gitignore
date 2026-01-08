@@ -1,0 +1,16 @@
+.cache/
+.local/
+.mozilla/
+.npm/
+Desktop/
+Documents/
+Downloads/
+Music/
+node_modules/
+Pictures/
+Public/
+Templates/
+Videos/
+.bash_history
+.bash_logout
+.bash_profile

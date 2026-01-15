@@ -21,40 +21,38 @@
     "^$": "focus"
     }
    },
-"clock": {
-  "format": "{:%H:%M    %a, %m.%d.}",
-  "interval": 1,
-  "tooltip-format": "<tt>{calendar}</tt>",
-  "on-click": "gtk-launch google-calendar.desktop",
-  "calendar": {
-    "format": {
-      "today": "<span color='#fAfBfC'><b>{}</b></span>"
-    }
-  }
-},
-
- 
+    "clock": {
+      "format": "{:%H:%M    %a, %m.%d.}",
+      "interval": 1,
+      "tooltip-format": "<tt>{calendar}</tt>",
+      "on-click": "gtk-launch google-calendar.desktop",
+      "calendar": {
+        "format": {
+          "today": "<span color='#fAfBfC'><b>{}</b></span>"
+        }
+      }
+    },
 
 
-  "network": {
-  "format-wifi": "",
-  "format-disconnected": "󰤭",          
-  "format-ethernet": " ",
-  "tooltip-format-disconnected": "Offline",
-  "tooltip-format-wifi": "{essid} ({signalStrength}%)",
-  "tooltip-format-ethernet": "{ifname}",
-  "on-click": "kitty nmtui"
-  },
+    "network": {
+      "format-wifi": "",
+      "format-disconnected": "󰤭",          
+      "format-ethernet": " ",
+      "tooltip-format-disconnected": "Offline",
+      "tooltip-format-wifi": "{essid} ({signalStrength}%)",
+      "tooltip-format-ethernet": "{ifname}",
+      "on-click": "kitty nmtui"
+    },
 
 
 
-  "custom/uptime": {
-  "exec": "~/.config/waybar/scripts/uptime.sh",
-  "interval": 10,
-  "tooltip": true,
-  "tooltip-format": "Uptime"
-},
-"custom/space_r": { "format": "  " }
- },
+    "custom/uptime": {
+      "exec": "~/.config/waybar/scripts/uptime.sh",
+      "interval": 10,
+      "tooltip": true,
+      "tooltip-format": "Uptime"
+    },
+    "custom/space_r": { "format": "  " }
+     },
 }
 

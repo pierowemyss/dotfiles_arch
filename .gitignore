@@ -17,9 +17,6 @@ Videos/
 .config/go/
 */user-dirs.dirs
 */user-dirs.locale
-<<<<<<< HEAD
-=======
 *.tmp
 .tmux/
 .gitconfig
->>>>>>> 809fa87 (Updated readme)
